@@ -137,6 +137,14 @@
       <div class="research-grid">
 
         <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="bot"></i></div>
+          <h3 data-en="LLM &amp; SLM Integration" data-da="LLM og SLM integration">LLM &amp; SLM Integration</h3>
+          <p data-en="Leveraging large and small language models for intelligent system automation, architectural recovery, and documentation — with built-in compliance for the EU AI Act and ISO standards."
+             data-da="Udnyttelse af store og små sprogmodeller til intelligent systemautomatisering, arkitekturgendannelse og dokumentation — med indbygget overholdelse af EU AI Act og ISO-standarder.">
+            Leveraging large and small language models for intelligent system automation, architectural recovery, and documentation — with built-in compliance for the EU AI Act and ISO standards.</p>
+        </article>
+
+        <article class="research-card fade-in">
           <div class="card-icon"><i data-lucide="cloud"></i></div>
           <h3 data-en="Sustainable Cloud Engineering" data-da="Bæredygtig Cloud Engineering">Sustainable Cloud Engineering</h3>
           <p data-en="High-performance cloud tools designed for energy efficiency and long-term sustainability."
@@ -200,6 +208,9 @@
             Advancing Danish distributed-computing education through curriculum development and student involvement.</p>
         </article>
 
+
+
+
       </div>
     </div>
   </section>
@@ -220,7 +231,13 @@
   </div>
 </footer>
 
-<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  // DOMContentLoaded fires after all deferred scripts (lucide, script.js) have executed
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+  });
+</script>
 <script src="./assets/script.js" defer></script>
 </body>
 </html>
