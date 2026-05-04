@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECO Lab – Distributed Edge and Cloud Computing · SDU</title>
+  <meta name="description" content="DECO Lab at SDU Software Engineering researches distributed edge and cloud computing, TinyML, sustainable AI, and ethical data ecosystems." />
+  <meta property="og:title" content="DECO Lab – SDU Software Engineering" />
+  <meta property="og:description" content="Distributed Edge and Cloud Computing research group at the University of Southern Denmark." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body data-page="home">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="DECO Lab home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="34" height="34" rx="6" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 10 H14 C20 10 24 13.5 24 18 C24 22.5 20 26 14 26 H8 Z"
+              stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+        <circle cx="8"  cy="10" r="1.5" fill="currentColor"/>
+        <circle cx="8"  cy="26" r="1.5" fill="currentColor"/>
+        <circle cx="28" cy="10" r="1.5" fill="var(--color-accent)"/>
+        <circle cx="28" cy="26" r="1.5" fill="var(--color-accent)"/>
+        <line x1="24" y1="10" x2="28" y2="10" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="24" y1="26" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="10" x2="28" y2="14" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="22" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+      </svg>
+      <span class="logo-text">DECO <span class="logo-lab">Lab</span></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="index.html"        data-en="About"        data-da="Om">About</a>
+      <a href="team.html"         data-en="Team"         data-da="Team">Team</a>
+      <a href="publications.html" data-en="Publications" data-da="Publikationer">Publications</a>
+      <a href="openings.html"     data-en="Openings"     data-da="Stillinger">Openings</a>
+      <a href="contact.html"      data-en="Contact"      data-da="Kontakt">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span id="lang-label">DA</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
+    <a href="index.html"        data-en="About"        data-da="Om"            onclick="closeMobileNav()">About</a>
+    <a href="team.html"         data-en="Team"         data-da="Team"          onclick="closeMobileNav()">Team</a>
+    <a href="publications.html" data-en="Publications" data-da="Publikationer" onclick="closeMobileNav()">Publications</a>
+    <a href="openings.html"     data-en="Openings"     data-da="Stillinger"    onclick="closeMobileNav()">Openings</a>
+    <a href="contact.html"      data-en="Contact"      data-da="Kontakt"       onclick="closeMobileNav()">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-badge fade-in">
+        <span data-en="SDU Software Engineering" data-da="SDU Software Engineering">SDU Software Engineering</span>
+      </div>
+      <h1 class="hero-title fade-in">
+        <span data-en="Distributed Edge"    data-da="Distribueret Edge">Distributed Edge</span><br/>
+        <em   data-en="and Cloud Computing" data-da="og Cloud Computing">and Cloud Computing</em>
+      </h1>
+      <p class="hero-desc fade-in"
+         data-en="We build sustainable, intelligent infrastructure for the future of computing — from the tiniest IoT devices to large-scale cloud systems."
+         data-da="Vi bygger bæredygtig, intelligent infrastruktur til fremtidens computing — fra de mindste IoT-enheder til storskalerede cloudsystemer.">
+        We build sustainable, intelligent infrastructure for the future of computing — from the tiniest IoT devices to large-scale cloud systems.
+      </p>
+      <div class="hero-cta fade-in">
+        <a href="#about"    class="btn btn-primary" data-en="Explore our research" data-da="Udforsk vores forskning">Explore our research</a>
+        <a href="team.html" class="btn btn-ghost"   data-en="Meet the team"        data-da="Mød teamet">Meet the team</a>
+      </div>
+    </div>
+    <div class="circuit-deco" aria-hidden="true">
+      <svg viewBox="0 0 400 300" fill="none">
+        <circle cx="50"  cy="50"  r="4" class="node"/>
+        <circle cx="150" cy="80"  r="4" class="node"/>
+        <circle cx="280" cy="40"  r="4" class="node"/>
+        <circle cx="350" cy="150" r="4" class="node"/>
+        <circle cx="200" cy="200" r="4" class="node"/>
+        <circle cx="80"  cy="220" r="4" class="node"/>
+        <line x1="50"  y1="50"  x2="150" y2="80"  class="wire"/>
+        <line x1="150" y1="80"  x2="280" y2="40"  class="wire"/>
+        <line x1="280" y1="40"  x2="350" y2="150" class="wire"/>
+        <line x1="350" y1="150" x2="200" y2="200" class="wire"/>
+        <line x1="200" y1="200" x2="80"  y2="220" class="wire"/>
+        <line x1="80"  y1="220" x2="50"  y2="50"  class="wire"/>
+        <line x1="150" y1="80"  x2="200" y2="200" class="wire"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ── ABOUT / RESEARCH AREAS ────────────────────────── -->
+  <section id="about" class="section section-about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" data-en="Research" data-da="Forskning">Research</span>
+        <h2 data-en="What we do" data-da="Hvad vi gør">What we do</h2>
+        <p class="section-desc"
+           data-en="DECO Lab pioneers research across the full computing continuum — from embedded AI on microcontrollers to cloud-scale distributed systems — with a commitment to sustainability and ethical data practices."
+           data-da="DECO Lab er pionerer inden for forskning på tværs af hele computing-kontinuumet — fra indlejret AI på microcontrollere til cloud-skalerede distribuerede systemer — med fokus på bæredygtighed og etisk datahåndtering.">
+          DECO Lab pioneers research across the full computing continuum — from embedded AI on microcontrollers to cloud-scale distributed systems — with a commitment to sustainability and ethical data practices.
+        </p>
+      </div>
+
+      <!--
+        ══════════════════════════════════════════════════════
+        RESEARCH AREAS  ·  Edit / add / remove <article> cards
+        ══════════════════════════════════════════════════════
+      -->
+      <div class="research-grid">
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="cloud"></i></div>
+          <h3 data-en="Sustainable Cloud Engineering" data-da="Bæredygtig Cloud Engineering">Sustainable Cloud Engineering</h3>
+          <p data-en="High-performance cloud tools designed for energy efficiency and long-term sustainability."
+             data-da="Højtydende cloud-værktøjer designet til energieffektivitet og langsigtet bæredygtighed.">
+            High-performance cloud tools designed for energy efficiency and long-term sustainability.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="cpu"></i></div>
+          <h3 data-en="TinyML &amp; Embedded AI" data-da="TinyML og indlejret AI">TinyML &amp; Embedded AI</h3>
+          <p data-en="Machine learning models that run on resource-constrained IoT devices — enabling intelligence at the edge."
+             data-da="Machine learning-modeller der kører på ressourcebegrænsede IoT-enheder — intelligens ved kanten.">
+            Machine learning models that run on resource-constrained IoT devices — enabling intelligence at the edge.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="bar-chart-2"></i></div>
+          <h3 data-en="Data-Driven Resource Balancing" data-da="Datadrevet ressourcebalancering">Data-Driven Resource Balancing</h3>
+          <p data-en="AI offloading strategies and adaptive resource allocation across heterogeneous computing environments."
+             data-da="AI-aflastningsstrategier og adaptiv ressourceallokering på tværs af heterogene computingmiljøer.">
+            AI offloading strategies and adaptive resource allocation across heterogeneous computing environments.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="activity"></i></div>
+          <h3 data-en="Efficient MLOps" data-da="Effektiv MLOps">Efficient MLOps</h3>
+          <p data-en="Data-aware ML pipelines and operations that reduce overhead and improve model lifecycle management."
+             data-da="Dataopmærksomme ML-pipelines der reducerer overhead og forbedrer model-livscyklushåndtering.">
+            Data-aware ML pipelines and operations that reduce overhead and improve model lifecycle management.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="leaf"></i></div>
+          <h3 data-en="AI for Sustainability" data-da="AI til bæredygtighed">AI for Sustainability</h3>
+          <p data-en="Applying AI and software engineering methods to tackle climate and environmental challenges."
+             data-da="Anvendelse af AI og softwareingeniørmetoder til at tackle klima- og miljøudfordringer.">
+            Applying AI and software engineering methods to tackle climate and environmental challenges.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="shield-check"></i></div>
+          <h3 data-en="Ethical Data Ecosystems" data-da="Etiske dataøkosystemer">Ethical Data Ecosystems</h3>
+          <p data-en="Compliant data spaces, knowledge-graph management, and trustworthy data sharing frameworks."
+             data-da="Kompatible datarum, vidensgrafhåndtering og troværdige datafordelingsrammer.">
+            Compliant data spaces, knowledge-graph management, and trustworthy data sharing frameworks.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="git-branch"></i></div>
+          <h3 data-en="Industry Collaboration" data-da="Industrisamarbejde">Industry Collaboration</h3>
+          <p data-en="Partnering with companies to cut compute costs and translate research into real-world impact."
+             data-da="Samarbejde med virksomheder om at reducere computingomkostninger og omsætte forskning til reel impact.">
+            Partnering with companies to cut compute costs and translate research into real-world impact.</p>
+        </article>
+
+        <article class="research-card fade-in">
+          <div class="card-icon"><i data-lucide="graduation-cap"></i></div>
+          <h3 data-en="Education &amp; Training" data-da="Uddannelse og træning">Education &amp; Training</h3>
+          <p data-en="Advancing Danish distributed-computing education through curriculum development and student involvement."
+             data-da="Fremme af dansk distributed computing-uddannelse gennem læreplansudvikling og studerendeinddragelse.">
+            Advancing Danish distributed-computing education through curriculum development and student involvement.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-sdu">SDU</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-deco">DECO Lab</span>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> DECO Lab · University of Southern Denmark ·
+      <a href="https://www.sdu.dk" target="_blank" rel="noopener noreferrer">sdu.dk</a>
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="./assets/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Openings – DECO Lab · SDU</title>
+  <meta name="description" content="Open positions and opportunities at DECO Lab, SDU Software Engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body data-page="openings">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="DECO Lab home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="34" height="34" rx="6" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 10 H14 C20 10 24 13.5 24 18 C24 22.5 20 26 14 26 H8 Z"
+              stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+        <circle cx="8"  cy="10" r="1.5" fill="currentColor"/>
+        <circle cx="8"  cy="26" r="1.5" fill="currentColor"/>
+        <circle cx="28" cy="10" r="1.5" fill="var(--color-accent)"/>
+        <circle cx="28" cy="26" r="1.5" fill="var(--color-accent)"/>
+        <line x1="24" y1="10" x2="28" y2="10" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="24" y1="26" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="10" x2="28" y2="14" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="22" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+      </svg>
+      <span class="logo-text">DECO <span class="logo-lab">Lab</span></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="index.html"        data-en="About"        data-da="Om">About</a>
+      <a href="team.html"         data-en="Team"         data-da="Team">Team</a>
+      <a href="publications.html" data-en="Publications" data-da="Publikationer">Publications</a>
+      <a href="openings.html"     data-en="Openings"     data-da="Stillinger">Openings</a>
+      <a href="contact.html"      data-en="Contact"      data-da="Kontakt">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span id="lang-label">DA</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
+    <a href="index.html"        data-en="About"        data-da="Om"            onclick="closeMobileNav()">About</a>
+    <a href="team.html"         data-en="Team"         data-da="Team"          onclick="closeMobileNav()">Team</a>
+    <a href="publications.html" data-en="Publications" data-da="Publikationer" onclick="closeMobileNav()">Publications</a>
+    <a href="openings.html"     data-en="Openings"     data-da="Stillinger"    onclick="closeMobileNav()">Openings</a>
+    <a href="contact.html"      data-en="Contact"      data-da="Kontakt"       onclick="closeMobileNav()">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ── OPENINGS ───────────────────────────────────────── -->
+  <section id="openings" class="section section-openings">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" data-en="Join us" data-da="Bliv en del af os">Join us</span>
+        <h2 data-en="Open Positions" data-da="Ledige stillinger">Open Positions</h2>
+        <p class="section-desc"
+           data-en="We are always interested in talented, motivated people. Check current openings below."
+           data-da="Vi er altid interesserede i talentfulde, motiverede mennesker. Se aktuelle stillinger nedenfor.">
+          We are always interested in talented, motivated people. Check current openings below.
+        </p>
+      </div>
+
+      <!--
+        ══════════════════════════════════════════════════════
+        OPENINGS  ·  Add / remove <article class="opening-card"> blocks.
+        Use class "closed" on <article> to mark a filled position.
+        To show "no openings", remove articles and uncomment empty-state below.
+        ══════════════════════════════════════════════════════
+      -->
+      <div class="openings-list">
+
+        <article class="opening-card fade-in">
+          <div class="opening-header">
+            <div>
+              <span class="opening-badge open" data-en="Open" data-da="Åben">Open</span>
+              <h3 class="opening-title"
+                  data-en="PhD Fellowship — TinyML for Edge Inference"
+                  data-da="PhD-stipendium — TinyML til Edge Inference">PhD Fellowship — TinyML for Edge Inference</h3>
+            </div>
+            <span class="opening-deadline" data-en="Deadline: [Add date]" data-da="Frist: [Tilføj dato]">Deadline: [Add date]</span>
+          </div>
+          <p class="opening-desc"
+             data-en="We seek a motivated PhD candidate to work on efficient ML inference on embedded devices. Background in embedded systems, ML, or software engineering is welcome."
+             data-da="Vi søger en motiveret ph.d.-kandidat til at arbejde med effektiv ML-inferens på indlejrede enheder. Baggrund inden for indlejrede systemer, ML eller softwareengineering er velkommen.">
+            We seek a motivated PhD candidate to work on efficient ML inference on embedded devices.
+            Background in embedded systems, ML, or software engineering is welcome.
+          </p>
+          <div class="opening-meta">
+            <span><i data-lucide="map-pin" aria-hidden="true"></i>
+              <span data-en="Odense, Denmark (SDU)" data-da="Odense, Danmark (SDU)">Odense, Denmark (SDU)</span></span>
+            <span><i data-lucide="clock" aria-hidden="true"></i>
+              <span data-en="Full-time · 3 years" data-da="Fuldtid · 3 år">Full-time · 3 years</span></span>
+          </div>
+          <a href="mailto:mtmo@mmmi.sdu.dk" class="btn btn-primary btn-sm" data-en="Apply / enquire" data-da="Ansøg / forespørg">Apply / enquire</a>
+        </article>
+
+        <!--
+        NO OPENINGS? Remove the article above and uncomment:
+        <div class="empty-state fade-in">
+          <i data-lucide="inbox" aria-hidden="true"></i>
+          <h3 data-en="No open positions right now"
+              data-da="Ingen ledige stillinger i øjeblikket">No open positions right now</h3>
+          <p data-en="We are always open to spontaneous applications — drop us an email!"
+             data-da="Vi er altid åbne for spontane ansøgninger — send os en e-mail!">
+             We are always open to spontaneous applications — drop us an email!</p>
+          <a href="mailto:mtmo@mmmi.sdu.dk" class="btn btn-primary"
+             data-en="Contact us" data-da="Kontakt os">Contact us</a>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-sdu">SDU</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-deco">DECO Lab</span>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> DECO Lab · University of Southern Denmark ·
+      <a href="https://www.sdu.dk" target="_blank" rel="noopener noreferrer">sdu.dk</a>
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="./assets/script.js" defer></script>
+</body>
+</html>

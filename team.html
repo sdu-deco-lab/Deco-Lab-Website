@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team – DECO Lab · SDU</title>
+  <meta name="description" content="Meet the DECO Lab research team at SDU Software Engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body data-page="team">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="DECO Lab home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="34" height="34" rx="6" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 10 H14 C20 10 24 13.5 24 18 C24 22.5 20 26 14 26 H8 Z"
+              stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+        <circle cx="8"  cy="10" r="1.5" fill="currentColor"/>
+        <circle cx="8"  cy="26" r="1.5" fill="currentColor"/>
+        <circle cx="28" cy="10" r="1.5" fill="var(--color-accent)"/>
+        <circle cx="28" cy="26" r="1.5" fill="var(--color-accent)"/>
+        <line x1="24" y1="10" x2="28" y2="10" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="24" y1="26" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="10" x2="28" y2="14" stroke="var(--color-accent)" stroke-width="1.5"/>
+        <line x1="28" y1="22" x2="28" y2="26" stroke="var(--color-accent)" stroke-width="1.5"/>
+      </svg>
+      <span class="logo-text">DECO <span class="logo-lab">Lab</span></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="index.html"        data-en="About"        data-da="Om">About</a>
+      <a href="team.html"         data-en="Team"         data-da="Team">Team</a>
+      <a href="publications.html" data-en="Publications" data-da="Publikationer">Publications</a>
+      <a href="openings.html"     data-en="Openings"     data-da="Stillinger">Openings</a>
+      <a href="contact.html"      data-en="Contact"      data-da="Kontakt">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span id="lang-label">DA</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
+    <a href="index.html"        data-en="About"        data-da="Om"            onclick="closeMobileNav()">About</a>
+    <a href="team.html"         data-en="Team"         data-da="Team"          onclick="closeMobileNav()">Team</a>
+    <a href="publications.html" data-en="Publications" data-da="Publikationer" onclick="closeMobileNav()">Publications</a>
+    <a href="openings.html"     data-en="Openings"     data-da="Stillinger"    onclick="closeMobileNav()">Openings</a>
+    <a href="contact.html"      data-en="Contact"      data-da="Kontakt"       onclick="closeMobileNav()">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ── TEAM ────────────────────────────────────────────── -->
+  <section id="team" class="section section-team">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" data-en="People" data-da="Mennesker">People</span>
+        <h2 data-en="Meet the team" data-da="Mød teamet">Meet the team</h2>
+        <p class="section-desc"
+           data-en="A diverse group of researchers, engineers, and educators pushing the boundaries of distributed computing."
+           data-da="En mangfoldig gruppe af forskere, ingeniører og undervisere der skubber til grænserne for distribueret computing.">
+          A diverse group of researchers, engineers, and educators pushing the boundaries of distributed computing.
+        </p>
+      </div>
+
+      <!--
+        ══════════════════════════════════════════════════════
+        TEAM MEMBERS  ·  How to update:
+          1. Edit name, data-en/da on role and bio, email.
+          2. Replace the avatar-placeholder div with:
+             <img src="./assets/photo-FIRSTNAME.jpg"
+                  alt="Full Name" width="160" height="160" loading="lazy">
+          3. Copy a card block to add a new member.
+          4. "team-lead" class gives the director an accent ring.
+        ══════════════════════════════════════════════════════
+      -->
+      <div class="team-grid">
+
+        <article class="team-card team-lead fade-in">
+          <div class="team-photo">
+            <!-- PHOTO: replace div below with <img src="./assets/photo-mahyar.jpg" ...> -->
+            <img src="./imgs/mahyar.jpg" alt="Full Name" width="160" height="160" loading="lazy" class="team-lead">
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Mahyar T. Moghaddam</h3>
+            <span class="member-role"
+                  data-en="Lab Director · Associate Professor"
+                  data-da="Laboratoriedirektør · Lektor">Lab Director · Associate Professor</span>
+            <!--<p class="member-bio"
+               data-en="[Add 1–2 sentence bio about research focus and background.]"
+               data-da="[Tilføj 1–2 sætningers biografi om forskningsfokus og baggrund.]">
+              [Add 1–2 sentence bio about research focus and background.]</p>-->
+            <a href="mailto:mtmo@mmmi.sdu.dk" class="member-email">
+              <i data-lucide="mail" aria-hidden="true"></i><span>mtmo@mmmi.sdu.dk</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <div class="avatar-placeholder" aria-label="Photo of Mikkel Baun Kjærgaard">MK</div>
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Mikkel Baun Kjærgaard</h3>
+            <span class="member-role"
+                  data-en="[Role — e.g. Professor / Senior Researcher]"
+                  data-da="[Rolle — f.eks. Professor / Senior forsker]">Professor</span>
+<!--            <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">[Add short bio.]</p>-->
+            <a href="mailto:mbkj@mmmi.sdu.dk" class="member-email">
+              <i data-lucide="mail" aria-hidden="true"></i><span>mbkj@mmmi.sdu.dk</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <div class="avatar-placeholder" aria-label="Photo of Aslak Johansen">AJ</div>
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Aslak Johansen</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Associate Professor</span>
+<!--            <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">[Add short bio.]</p>-->
+            <a href="mailto:asjo@mmmi.sdu.dk" class="member-email">
+              <i data-lucide="mail" aria-hidden="true"></i><span>asjo@mmmi.sdu.dk</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/hviid.jpg" alt="Full Name" width="160" height="160" loading="lazy" >
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Jakob Hviid</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Assistant Professor</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Research is positioned at the intersection of software architecture and AI, with a unifying focus on how structured ontologies and knowledge graphs can serve as semantic foundations for intelligent, context-aware systems. Three directions extend this principle: knowledge-driven architectures for self-managing AI systems, ontology-grounded contextualization for AI in critical infrastructure (energy sector as primary application domain), and transferable reasoning frameworks for stateless AI systems.</p>
+          <a href="mailto:jahv@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>jah@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <div class="avatar-placeholder" aria-label="Photo of Jan Sørensen">JS</div>
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Jan Corfixen Sørensen</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Associate Professor</span>
+<!--            <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">[Add short bio.]</p>-->
+            <a href="mailto:jaso@mmmi.sdu.dk" class="member-email">
+              <i data-lucide="mail" aria-hidden="true"></i><span>jcs@mmmi.sdu.dk</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/daghero.jpg" alt="Full Name" width="160" height="160" loading="lazy" >
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Francesco Daghero</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Postdoctoral Researcher</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Francesco Daghero’s research interests include machine learning and deep learning, with a primary focus on efficiency across both resource-constrained systems, such as TinyML, and high-performance computing platforms. His work emphasizes energy and memory efficiency, spanning optimizations from algorithm design to compiler and system-level techniques.</p>
+          <a href="mailto:frda@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>fdag@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/tiziano.jpeg" alt="Full Name" width="160" height="160" loading="lazy">
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Tiziano Santilli</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Postdoctoral Researcher</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Tiziano Santilli investigates the intersection of software architecture and generative AI, focusing on the strategic integration of Large and Small Language Models (LLMs and SLMs) to automate architectural recovery and system documentation. His work emphasizes continuous compliance in highly regulated sectors, designing frameworks that treat ethical and safety constraints as fundamental architectural guardrails. By optimizing the trade-offs between model scale and system efficiency, he develops "compliance-aware" architectures that balance cutting-edge AI performance with rigorous engineering standards.</p>
+          <a href="mailto:tisa@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>tisa@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/albonico.jpg" alt="Full Name" width="160" height="160" loading="lazy">
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Michel Albonico</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Associate Professor</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">My research focuses on sustainable software engineering for cyber-physical systems, particularly robotics, in the age of AI. In robotics, I am especially interested in projects based on the Robot Operating System (ROS), with a particular focus on improving the software development pipeline and enhancing the quality of robotic software products.</p>
+          <a href="mailto:mical@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>mical@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/emil.jpg" alt="Full Name" width="160" height="160" loading="lazy">
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Emil Jørgensen Njor</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">Assistant Professor</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Researching AI on extremely resource-constrained devices, with a focus on scaling adoption and addressing the nuanced challenges and benefits of the technology.</p>
+          <a href="mailto:njor@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>njor@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/anders.png" alt="Full Name" width="160" height="160" loading="lazy" >
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Anders L. B. Petersen</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">PhD Student</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Anders' focus lies at the intersection of machine learning, software architecture, and the development of reliable AI systems.
+             With a background in mathematical modeling and computation from the Technical University of Denmark and over 4 years of industry experience, Anders
+             offers a strong analytical foundation and practical experience in designing intelligent AI systems.</p>
+          <a href="mailto:alpe@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>anbae@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+        <article class="team-card fade-in">
+          <div class="team-photo">
+            <img src="./imgs/leo.jpg" alt="Full Name" width="160" height="160" loading="lazy" >
+          </div>
+          <div class="team-info">
+            <h3 class="member-name">Leo Wilhelm Lierse</h3>
+            <span class="member-role" data-en="[Role]" data-da="[Rolle]">PhD Student</span>
+          </div>
+          <p class="member-bio" data-en="[Add short bio.]" data-da="[Tilføj kort biografi.]">Sustainable Computing & Distributed Systems</p>
+          <a href="mailto:leoli@mmmi.sdu.dk" class="member-email">
+            <i data-lucide="mail" aria-hidden="true"></i><span>leoli@mmmi.sdu.dk</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-sdu">SDU</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-deco">DECO Lab</span>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> DECO Lab · University of Southern Denmark ·
+      <a href="https://www.sdu.dk" target="_blank" rel="noopener noreferrer">sdu.dk</a>
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="./assets/script.js" defer></script>
+</body>
+</html>
