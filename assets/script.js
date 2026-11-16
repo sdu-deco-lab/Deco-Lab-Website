@@ -11,20 +11,26 @@
   const SUN_ICON  = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
   const MOON_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
 
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  root.setAttribute('data-theme', theme);
+  const THEME_KEY = 'deco-theme';
+  const stored = localStorage.getItem(THEME_KEY);
+  let theme = (stored === 'dark' || stored === 'light')
+      ? stored
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-  function applyTheme (t) {
+  function applyTheme (t, persist) {
     theme = t;
     root.setAttribute('data-theme', t);
+    if (persist) localStorage.setItem(THEME_KEY, t);
     if (toggle) {
       toggle.innerHTML = t === 'dark' ? SUN_ICON : MOON_ICON;
       toggle.setAttribute('aria-label', `Switch to ${t === 'dark' ? 'light' : 'dark'} mode`);
     }
   }
-  applyTheme(theme);
+  applyTheme(theme, false);
 
-  if (toggle) toggle.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
+  // Only persist on an explicit click — a page that loads with no saved
+  // preference should still just follow the OS setting next time.
+  if (toggle) toggle.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark', true));
 })();
 
 
