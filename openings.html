@@ -38,6 +38,7 @@
       <a href="index.html"        data-en="About"        data-da="Om">About</a>
       <a href="team.html"         data-en="Team"         data-da="Team">Team</a>
       <a href="publications.html" data-en="Publications" data-da="Publikationer">Publications</a>
+      <a href="tools-events.html" data-en="Tools &amp; Events" data-da="Værktøjer &amp; Arrangementer">Tools &amp; Events</a>
       <a href="openings.html"     data-en="Openings"     data-da="Stillinger">Openings</a>
       <a href="contact.html"      data-en="Contact"      data-da="Kontakt">Contact</a>
     </nav>
@@ -66,6 +67,7 @@
     <a href="index.html"        data-en="About"        data-da="Om"            onclick="closeMobileNav()">About</a>
     <a href="team.html"         data-en="Team"         data-da="Team"          onclick="closeMobileNav()">Team</a>
     <a href="publications.html" data-en="Publications" data-da="Publikationer" onclick="closeMobileNav()">Publications</a>
+    <a href="tools-events.html" data-en="Tools &amp; Events" data-da="Værktøjer &amp; Arrangementer" onclick="closeMobileNav()">Tools &amp; Events</a>
     <a href="openings.html"     data-en="Openings"     data-da="Stillinger"    onclick="closeMobileNav()">Openings</a>
     <a href="contact.html"      data-en="Contact"      data-da="Kontakt"       onclick="closeMobileNav()">Contact</a>
   </nav>
@@ -88,51 +90,14 @@
 
       <!--
         ══════════════════════════════════════════════════════
-        OPENINGS  ·  Add / remove <article class="opening-card"> blocks.
-        Use class "closed" on <article> to mark a filled position.
-        To show "no openings", remove articles and uncomment empty-state below.
+        OPENINGS  ·  rendered by assets/script.js from a shared
+        Google Sheet. To add/remove/edit a position, edit the
+        sheet only — see script.js for the sheet link and the
+        expected column layout.
         ══════════════════════════════════════════════════════
       -->
-      <div class="openings-list">
-
-        <!--<article class="opening-card fade-in">
-          <div class="opening-header">
-            <div>
-              <span class="opening-badge open" data-en="Open" data-da="Åben">Open</span>
-              <h3 class="opening-title"
-                  data-en="PhD Fellowship — TinyML for Edge Inference"
-                  data-da="PhD-stipendium — TinyML til Edge Inference">PhD Fellowship — TinyML for Edge Inference</h3>
-            </div>
-            <span class="opening-deadline" data-en="Deadline: [Add date]" data-da="Frist: [Tilføj dato]">Deadline: [Add date]</span>
-          </div>
-          <p class="opening-desc"
-             data-en="We seek a motivated PhD candidate to work on efficient ML inference on embedded devices. Background in embedded systems, ML, or software engineering is welcome."
-             data-da="Vi søger en motiveret ph.d.-kandidat til at arbejde med effektiv ML-inferens på indlejrede enheder. Baggrund inden for indlejrede systemer, ML eller softwareengineering er velkommen.">
-            We seek a motivated PhD candidate to work on efficient ML inference on embedded devices.
-            Background in embedded systems, ML, or software engineering is welcome.
-          </p>
-          <div class="opening-meta">
-            <span><i data-lucide="map-pin" aria-hidden="true"></i>
-              <span data-en="Odense, Denmark (SDU)" data-da="Odense, Danmark (SDU)">Odense, Denmark (SDU)</span></span>
-            <span><i data-lucide="clock" aria-hidden="true"></i>
-              <span data-en="Full-time · 3 years" data-da="Fuldtid · 3 år">Full-time · 3 years</span></span>
-          </div>
-          <a href="mailto:mtmo@mmmi.sdu.dk" class="btn btn-primary btn-sm" data-en="Apply / enquire" data-da="Ansøg / forespørg">Apply / enquire</a>
-        </article>-->
-
-        <!--
-        NO OPENINGS? Remove the article above and uncomment:  -->
-        <div class="empty-state fade-in">
-          <i data-lucide="inbox" aria-hidden="true"></i>
-          <h3 data-en="No open positions right now"
-              data-da="Ingen ledige stillinger i øjeblikket">No open positions right now</h3>
-          <p data-en="We are always open to spontaneous applications — drop us an email!"
-             data-da="Vi er altid åbne for spontane ansøgninger — send os en e-mail!">
-             We are always open to spontaneous applications — drop us an email!</p>
-          <a href="mailto:mtmo@mmmi.sdu.dk" class="btn btn-primary"
-             data-en="Contact us" data-da="Kontakt os">Contact us</a>
-        </div>
-
+      <div class="openings-list" id="openings-list">
+        <div class="empty-state fade-in" role="status"><p>Loading openings…</p></div>
       </div>
     </div>
   </section>
