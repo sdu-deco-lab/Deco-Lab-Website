@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Openings – DECO Lab · SDU</title>
   <meta name="description" content="Open positions and opportunities at DECO Lab, SDU Software Engineering." />
+  <link rel="canonical" href="https://decolab.dk/openings.html" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DECO Lab · SDU" />
+  <meta property="og:title" content="Openings – DECO Lab · SDU" />
+  <meta property="og:description" content="Open positions and opportunities at DECO Lab, SDU Software Engineering." />
+  <meta property="og:url" content="https://decolab.dk/openings.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Openings – DECO Lab · SDU" />
+  <meta name="twitter:description" content="Open positions and opportunities at DECO Lab, SDU Software Engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
@@ -80,7 +91,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label" data-en="Join us" data-da="Bliv en del af os">Join us</span>
-        <h2 data-en="Open Positions" data-da="Ledige stillinger">Open Positions</h2>
+        <h1 data-en="Open Positions" data-da="Ledige stillinger">Open Positions</h1>
         <p class="section-desc"
            data-en="We are always interested in talented, motivated people. Check current openings below."
            data-da="Vi er altid interesserede i talentfulde, motiverede mennesker. Se aktuelle stillinger nedenfor.">
@@ -97,8 +108,20 @@
         ══════════════════════════════════════════════════════
       -->
       <div class="openings-list" id="openings-list">
-        <div class="empty-state fade-in" role="status"><p>Loading openings…</p></div>
+        <!-- SSR:START:openings-list -->
+
+        <div class="empty-state fade-in" role="status">
+          <i data-lucide="inbox" aria-hidden="true"></i>
+          <h3>No open positions right now</h3>
+          <p>We are always open to spontaneous applications — drop us an email!</p>
+          <a href="mailto:mtmo@mmmi.sdu.dk" class="btn btn-primary">Contact us</a>
+        </div>
+        <!-- SSR:END:openings-list -->
       </div>
+      <noscript>
+        <p>This list loads with JavaScript. Please enable JavaScript, or contact
+          <a href="mailto:mtmo@mmmi.sdu.dk">mtmo@mmmi.sdu.dk</a> to ask about current openings.</p>
+      </noscript>
     </div>
   </section>
 

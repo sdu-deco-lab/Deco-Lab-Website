@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tools &amp; Events – DECO Lab · SDU</title>
   <meta name="description" content="Tools, workshops, and summer schools from DECO Lab at SDU Software Engineering." />
+  <link rel="canonical" href="https://decolab.dk/tools-events.html" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DECO Lab · SDU" />
+  <meta property="og:title" content="Tools &amp; Events – DECO Lab · SDU" />
+  <meta property="og:description" content="Tools, workshops, and summer schools from DECO Lab at SDU Software Engineering." />
+  <meta property="og:url" content="https://decolab.dk/tools-events.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tools &amp; Events – DECO Lab · SDU" />
+  <meta name="twitter:description" content="Tools, workshops, and summer schools from DECO Lab at SDU Software Engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
@@ -80,7 +91,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label" data-en="Impact" data-da="Effekt">Impact</span>
-        <h2 data-en="Tools &amp; Events" data-da="Værktøjer &amp; Arrangementer">Tools &amp; Events</h2>
+        <h1 data-en="Tools &amp; Events" data-da="Værktøjer &amp; Arrangementer">Tools &amp; Events</h1>
         <p class="section-desc"
            data-en="Software we've built and released, plus the workshops and summer schools we organize."
            data-da="Software vi har bygget og udgivet, samt de workshops og sommerskoler vi arrangerer.">
@@ -108,23 +119,40 @@
       <div class="te-block" id="te-tools" data-category="tool">
         <h3 class="te-block-title" data-en="Tools" data-da="Værktøjer">Tools</h3>
         <div class="te-grid" id="te-tools-grid">
-          <p class="te-empty">Loading…</p>
+          <!-- SSR:START:te-tools-grid -->
+<p class="te-empty">No tools listed yet.</p>
+        <!-- SSR:END:te-tools-grid -->
         </div>
       </div>
 
       <div class="te-block" id="te-workshops" data-category="workshop">
         <h3 class="te-block-title" data-en="Workshops" data-da="Workshops">Workshops</h3>
         <div class="te-grid" id="te-workshops-grid">
-          <p class="te-empty">Loading…</p>
+          <!-- SSR:START:te-workshops-grid -->
+
+      <article class="te-card fade-in">
+        <div class="te-card-icon"><i data-lucide="users" aria-hidden="true"></i></div>
+        <h4 class="te-card-title"><a href="https://ldcluster.com/en/events/the-ceo-ai-operating-system/" target="_blank" rel="noopener noreferrer">The CEO AI Operating System</a></h4>
+        <span class="te-card-date">12-11-2026</span>
+        <p class="te-card-desc">From AI chat to practical AI agents and better business decisions.</p>
+      </article>
+        <!-- SSR:END:te-workshops-grid -->
         </div>
       </div>
 
       <div class="te-block" id="te-summer-schools" data-category="summerschool">
         <h3 class="te-block-title" data-en="Summer Schools" data-da="Sommerskoler">Summer Schools</h3>
         <div class="te-grid" id="te-summerschools-grid">
-          <p class="te-empty">Loading…</p>
+          <!-- SSR:START:te-summerschools-grid -->
+<p class="te-empty">No summer schools yet.</p>
+        <!-- SSR:END:te-summerschools-grid -->
         </div>
       </div>
+
+      <noscript>
+        <p>These lists load with JavaScript. Please enable JavaScript, or contact
+          <a href="mailto:mtmo@mmmi.sdu.dk">mtmo@mmmi.sdu.dk</a> to ask about our tools, workshops, and summer schools.</p>
+      </noscript>
 
     </div>
   </section>

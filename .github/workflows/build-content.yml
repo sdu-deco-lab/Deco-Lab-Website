@@ -1,0 +1,36 @@
+name: Rebuild pre-rendered content
+
+# Fetches the Publications / Openings / Tools & Events Google Sheets
+# and bakes their current content as static HTML into the relevant
+# pages (see scripts/build-content.mjs), so SEO/GEO crawlers that
+# don't run JavaScript still see real content. Runs on its own daily
+# schedule only — a push to the repo does not trigger this.
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # daily at 03:00 UTC
+  workflow_dispatch: {} # allow a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build pre-rendered content from Google Sheets
+        run: node scripts/build-content.mjs
+
+      - name: Commit changes, if any
+        run: |
+          git config user.name "deco-lab-bot"
+          git config user.email "actions@github.com"
+          git add publications.html openings.html tools-events.html
+          git diff --cached --quiet || git commit -m "chore: refresh pre-rendered content from Google Sheets"
+          git push

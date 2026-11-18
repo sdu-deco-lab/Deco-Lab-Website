@@ -274,10 +274,19 @@ const publicationsData = [];
       const fields    = match[3];
 
       const get = key => {
-        // \b avoids e.g. "title" matching inside "booktitle"
-        const rx = new RegExp('\\b' + key + '\\s*=\\s*[{"]([^}"]*)[}"]', 'i');
+        // \b avoids e.g. "title" matching inside "booktitle". The
+        // capture group also tolerates one level of nested braces
+        // (e.g. author = {Marco {De Luca}}) and backslash-escaped
+        // braces (\{De Luca\}) — both common ways BibTeX protects
+        // compound names — instead of truncating at the first "}".
+        const rx = new RegExp('\\b' + key + String.raw`\s*=\s*[{"]((?:\{[^{}]*\}|\\.|[^}"\\])*)[}"]`, 'i');
         const m  = rx.exec(fields);
-        return m ? m[1].trim().replace(/\s+/g, ' ') : '';
+        if (!m) return '';
+        return m[1]
+            .replace(/\\([{}])/g, '$1')  // unescape \{ \}
+            .replace(/[{}]/g, '')         // drop remaining protective braces
+            .trim()
+            .replace(/\s+/g, ' ');
       };
 
       const typeMap = {
@@ -315,6 +324,10 @@ const publicationsData = [];
       })
       .catch(err => {
         console.warn('DECO Lab: could not load publications from the Google Sheet —', err.message);
+        // If the page already has pre-rendered publications baked in (see
+        // scripts/build-content.mjs), keep showing those rather than
+        // replacing good content with an error message.
+        if (list.querySelector('.pub-item')) return;
         list.innerHTML = `
           <div class="pub-empty" role="status">
             <p>Could not load publications from the shared Google Sheet — ${err.message}.<br>
@@ -505,6 +518,10 @@ function escapeHtml (str) {
       .then(csvText => renderOpenings(csvToObjects(csvText)))
       .catch(err => {
         console.warn('DECO Lab: could not load openings from the Google Sheet —', err.message);
+        // If the page already has pre-rendered openings baked in (see
+        // scripts/build-content.mjs), keep showing those rather than
+        // replacing good content with an error message.
+        if (list.querySelector('.opening-card')) return;
         list.innerHTML = `
           <div class="empty-state fade-in" role="status">
             <p>Could not load openings from the shared Google Sheet — ${escapeHtml(err.message)}.<br>
@@ -629,9 +646,12 @@ function escapeHtml (str) {
       })
       .catch(err => {
         console.warn('DECO Lab: could not load Tools & Events from the Google Sheet —', err.message);
+        // If a grid already has pre-rendered cards baked in (see
+        // scripts/build-content.mjs), leave it alone rather than
+        // replacing good content with an error message.
         const msg = `<p class="te-empty">Could not load this section — ${escapeHtml(err.message)}.</p>`;
-        if (toolsGrid)    toolsGrid.innerHTML    = msg;
-        if (workshopGrid) workshopGrid.innerHTML = msg;
-        if (summerGrid)   summerGrid.innerHTML   = msg;
+        [toolsGrid, workshopGrid, summerGrid].forEach(grid => {
+          if (grid && !grid.querySelector('.te-card')) grid.innerHTML = msg;
+        });
       });
 })();

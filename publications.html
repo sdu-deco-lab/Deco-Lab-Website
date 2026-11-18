@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications – DECO Lab · SDU</title>
   <meta name="description" content="Peer-reviewed research publications from DECO Lab at SDU Software Engineering." />
+  <link rel="canonical" href="https://decolab.dk/publications.html" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DECO Lab · SDU" />
+  <meta property="og:title" content="Publications – DECO Lab · SDU" />
+  <meta property="og:description" content="Peer-reviewed research publications from DECO Lab at SDU Software Engineering." />
+  <meta property="og:url" content="https://decolab.dk/publications.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Publications – DECO Lab · SDU" />
+  <meta name="twitter:description" content="Peer-reviewed research publications from DECO Lab at SDU Software Engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
@@ -80,7 +91,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label" data-en="Output" data-da="Output">Output</span>
-        <h2 data-en="Publications" data-da="Publikationer">Publications</h2>
+        <h1 data-en="Publications" data-da="Publikationer">Publications</h1>
         <p class="section-desc"
            data-en="Our peer-reviewed research. Add entries to the shared Google Sheet to update this list."
            data-da="Vores fagfællebedømte forskning. Tilføj poster til det delte Google Sheet for at opdatere listen.">
@@ -97,8 +108,185 @@
         <button class="pub-filter-btn"         data-filter="preprint"   data-en="Preprint"   data-da="Preprint">Preprint</button>
       </div>
 
-      <!-- Publication list — rendered by script.js -->
-      <div class="pub-list" id="pub-list" role="list" aria-label="Publications list"></div>
+      <!-- Publication list — rendered by script.js on load, and
+           pre-rendered daily by scripts/build-content.mjs (between
+           the SSR markers below) so crawlers without JS see real
+           content too. -->
+      <div class="pub-list" id="pub-list" role="list" aria-label="Publications list"><!-- SSR:START:pub-list -->
+
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">Control Loop Patterns for AI-Enabled Systems: A Systematic Review</div>
+          </div>
+          <div class="pub-authors">Tourchi Moghaddam, Mahyar and Daghero, Francesco and Santilli, Tiziano and Alipour, Mina</div>
+          <div class="pub-venue">Software Architecture</div>
+          <div class="pub-footer">
+            <span class="pub-year">2027</span>
+            
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">Persona-as-Configuration: Generative Stakeholder Reporting for Agricultural Floods</div>
+          </div>
+          <div class="pub-authors">Larsen, Oliver Aleksander and Santilli, Tiziano and Daghero, Francesco and Moghaddam, Mahyar T.</div>
+          <div class="pub-venue">Software Architecture. ECSA 2026 Tracks and Workshops</div>
+          <div class="pub-footer">
+            <span class="pub-year">2027</span>
+            
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge preprint">Preprint</span>
+            <div class="pub-title"><a href="https://arxiv.org/abs/2604.11206" target="_blank" rel="noopener noreferrer">Designing Adaptive Digital Nudging Systems with LLM-Driven Reasoning</a></div>
+          </div>
+          <div class="pub-authors">Tiziano Santilli and Mina Alipour and Mahyar Tourchi Moghaddam</div>
+          <div class="pub-venue"></div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2604.11206" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge preprint">Preprint</span>
+            <div class="pub-title"><a href="https://arxiv.org/abs/2604.26470" target="_blank" rel="noopener noreferrer">Hierarchical adaptive control for real-time dynamic inference at the edge</a></div>
+          </div>
+          <div class="pub-authors">Francesco Daghero and Mahyar Tourchi Moghaddam and Mikkel Baun Kjærgaard</div>
+          <div class="pub-venue"></div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2604.26470" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">Operationalize Self-Managing Machine Learning Systems with a Generalizable Knowledge-Driven Architecture</div>
+          </div>
+          <div class="pub-authors">Bæk-Petersen, Anders Launer and Moghaddam, Mahyar T. and Hviid, Jakob and Kjærgaard, Mikkel Baun</div>
+          <div class="pub-venue">2026 IEEE 23rd International Conference on Software Architecture Companion (ICSA-C)</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1109/ICSA-C68850.2026.00104" target="_blank" rel="noopener noreferrer">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge preprint">Preprint</span>
+            <div class="pub-title"><a href="https://arxiv.org/abs/2610.28702" target="_blank" rel="noopener noreferrer">Multi-agent LLMs on the Cloud-Edge-IoT Continuum: A Systematic Mapping Study on Architectures, Deployment, and Evaluation</a></div>
+          </div>
+          <div class="pub-authors">Mahyar Tourchi Moghaddam and Tiziano Santilli and Leo Wilhelm Lierse and Sebastian Werner and Francesco Daghero</div>
+          <div class="pub-venue"></div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2610.28702" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title"><a href="https://doi.org/10.1145/3776574.3831206" target="_blank" rel="noopener noreferrer">Affect-Aware Game Personalization with Reinforcement Learning: How to Improve Players' Engagement, Performance, and Emotions</a></div>
+          </div>
+          <div class="pub-authors">Tourchi Moghaddam, Mahyar and Santilli, Tiziano and Alipour, Mina</div>
+          <div class="pub-venue">Proceedings of the 28th International Conference On Multimodal Interaction</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1145/3776574.3831206" target="_blank" rel="noopener noreferrer">DOI</a><a class="pub-link" href="https://doi.org/10.1145/3776574.3831206" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge journal">Journal</span>
+            <div class="pub-title"><a href="https://doi.org/10.1145/3816779" target="_blank" rel="noopener noreferrer">Continuous Behavioral Synthesis for Adaptive Health Dashboards: An LLM-Mediated Architecture Integrating Explicit Preference, Spatial Reorganization, and Attention Allocation Signals</a></div>
+          </div>
+          <div class="pub-authors">Santilli, Tiziano and Alipour, Mina and Tourchi Moghaddam, Mahyar</div>
+          <div class="pub-venue">Proc. ACM Hum.-Comput. Interact.</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1145/3816779" target="_blank" rel="noopener noreferrer">DOI</a><a class="pub-link" href="https://doi.org/10.1145/3816779" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge journal">Journal</span>
+            <div class="pub-title"><a href="https://doi.org/10.1145/3816781" target="_blank" rel="noopener noreferrer">LLM-Assisted Reinforcement Learning for Affective Game Adaptation</a></div>
+          </div>
+          <div class="pub-authors">Tourchi Moghaddam, Mahyar and Santilli, Tiziano and Alipour, Mina</div>
+          <div class="pub-venue">Proc. ACM Hum.-Comput. Interact.</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1145/3816781" target="_blank" rel="noopener noreferrer">DOI</a><a class="pub-link" href="https://doi.org/10.1145/3816781" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge preprint">Preprint</span>
+            <div class="pub-title"><a href="https://arxiv.org/abs/2606.29520" target="_blank" rel="noopener noreferrer">SAKE: Software Architectural Knowledge Evaluation Benchmark for Large Language Models</a></div>
+          </div>
+          <div class="pub-authors">Tiziano Santilli and Francesco Daghero and Mayhar Tourchi Moghaddam</div>
+          <div class="pub-venue"></div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2606.29520" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">CIAO - Code In Architecture Out - Automated Software Architecture Documentation with Large Language Models</div>
+          </div>
+          <div class="pub-authors">De Luca, Marco and Tiziano Santilli and Domenico Amalfitano and Fasolino, Anna Rita and Patrizio Pelliccione</div>
+          <div class="pub-venue">2026 IEEE 23rd International Conference on Software Architecture (ICSA)</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1109/ICSA66085.2026.00026" target="_blank" rel="noopener noreferrer">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge journal">Journal</span>
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0950584926001199" target="_blank" rel="noopener noreferrer">A decontextualized LLM-based safeguard technique for automated jailbreak mitigation</a></div>
+          </div>
+          <div class="pub-authors">Tiziano Santilli and Marco De Luca and Domenico Amalfitano and Anna Rita Fasolino and Patrizio Pelliccione</div>
+          <div class="pub-venue">Information and Software Technology</div>
+          <div class="pub-footer">
+            <span class="pub-year">2026</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/https://doi.org/10.1016/j.infsof.2026.108130" target="_blank" rel="noopener noreferrer">DOI</a><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0950584926001199" target="_blank" rel="noopener noreferrer">Link</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">Survey on Operational Metrics for Reliable Machine Learning Systems</div>
+          </div>
+          <div class="pub-authors">Bæk-Petersen, Anders Launer</div>
+          <div class="pub-venue">2025 IEEE 22nd International Conference on Software Architecture Companion (ICSA-C)</div>
+          <div class="pub-footer">
+            <span class="pub-year">2025</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1109/ICSA-C65153.2025.00026" target="_blank" rel="noopener noreferrer">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item" role="listitem">
+          <div class="pub-header">
+            <span class="pub-type-badge conference">Conference</span>
+            <div class="pub-title">AI Pipelines: A Scalable Architecture for Dynamic Data Processing</div>
+          </div>
+          <div class="pub-authors">Hviid, Jakob and Bæk-Petersen, Anders Launer and Kolvig-Raun, Emil Stubbe and Marín-Vega, Juan</div>
+          <div class="pub-venue">2025 IEEE 22nd International Conference on Software Architecture Companion (ICSA-C)</div>
+          <div class="pub-footer">
+            <span class="pub-year">2025</span>
+            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1109/ICSA-C65153.2025.00020" target="_blank" rel="noopener noreferrer">DOI</a></div>
+          </div>
+        </div>
+        <!-- SSR:END:pub-list --></div>
+      <noscript>
+        <p>This list loads with JavaScript. Please enable JavaScript, or contact
+          <a href="mailto:mtmo@mmmi.sdu.dk">mtmo@mmmi.sdu.dk</a> for a list of our publications.</p>
+      </noscript>
     </div>
   </section>
 

@@ -1,0 +1,42 @@
+# DECO Lab · SDU — robots.txt
+# Everything is public research-lab content; crawling (including by AI
+# answer-engine bots) is welcome.
+
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI crawlers / answer engines (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://decolab.dk/sitemap.xml

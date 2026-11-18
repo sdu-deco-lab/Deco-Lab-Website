@@ -1,0 +1,18 @@
+# DECO Lab
+
+> DECO Lab is a research lab in SDU Software Engineering at the University of Southern Denmark (SDU), led by Mahyar T. Moghaddam. It researches engineering AI-enabled systems, distributed and sustainable (green) computing, software architecture, and human-centered software engineering.
+
+DECO Lab works on topics including: AI-enabled systems engineering, LLM/SLM integration for software architecture recovery and documentation, sustainable cloud and edge computing, TinyML and efficient machine learning on resource-constrained devices, robotics software engineering, knowledge-driven and self-managing AI architectures, and compliance-aware AI architectures (e.g. EU AI Act).
+
+## Pages
+
+- [About](https://decolab.dk/): Lab overview, mission, and research areas.
+- [Team](https://decolab.dk/team.html): Researchers, their roles, and research focus; also lists external collaborators.
+- [Publications](https://decolab.dk/publications.html): Peer-reviewed papers and preprints authored by lab members.
+- [Tools & Events](https://decolab.dk/tools-events.html): Software tools released by the lab, plus workshops and summer schools it organizes.
+- [Openings](https://decolab.dk/openings.html): Current open positions (PhD, postdoc, research assistant, etc.).
+- [Contact](https://decolab.dk/contact.html): How to reach the lab.
+
+## Notes for AI agents / crawlers
+
+The Publications, Tools & Events, and Openings pages render their lists client-side (JavaScript) from live data sources, so content may not appear in a plain HTML fetch. Team, About, and Contact page content is static HTML and fully present on load.
